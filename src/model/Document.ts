@@ -1,5 +1,5 @@
 export interface Document {
     
-    getDocument: Document;
-    getValue: string;
+    getDocument(): Document;
+    getValue(): string;
 }
