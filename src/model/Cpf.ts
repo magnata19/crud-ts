@@ -5,10 +5,10 @@ export class Cpf implements Document{
     private value: string;
 
     constructor(value: string) {
+        this.value = value;
         if(!Cpf.isValid(value)) {
             throw new Error(`Cpf ${this.value} is not valid.`)
         }
-        this.value = value;
     }
 
     static isValid(value: string): boolean {

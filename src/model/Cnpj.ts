@@ -5,10 +5,10 @@ export class Cnpj implements Document{
     private value: string;
 
     constructor(value: string) {
+        this.value = value;
         if(!Cnpj.isValid(value)) {
             throw new Error(`Cnpj ${this.value} is not valid.`)
         }
-        this.value = value;
     }
 
     static isValid(value: string): boolean {
@@ -18,6 +18,7 @@ export class Cnpj implements Document{
     getDocument(): Document {
         return this;
     }
+
     getValue(): string {
         return this.value;
     }
