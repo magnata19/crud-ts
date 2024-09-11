@@ -11,4 +11,8 @@ router.post("/customer", (request: Request, response: Response) => {
     controller.save(request, response);
 })
 
+router.get("/customer", (request: Request, response: Response) => {
+    controller.getAll(request, response);
+})
+
 export {router};

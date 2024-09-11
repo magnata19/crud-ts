@@ -14,4 +14,9 @@ export class CustomerCreate {
         await this.repository.save(customer);
         response.status(201).json({customer});
     }
+
+    async getAll(request: Request, response: Response) {
+        const customers = await this.repository.getAll();
+        response.status(200).json({customers});
+    }
 }
